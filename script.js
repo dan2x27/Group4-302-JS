@@ -26,7 +26,6 @@ async function fetchWeather(city) {
   displayWeather(data);
 }
 
-// Display current weather data
 function displayWeather(data) {
   const cityName = document.getElementById('city-name');
   const weatherIcon = document.getElementById('weather-icon');
@@ -43,9 +42,9 @@ function displayWeather(data) {
 
 function displayForecast(data) {
   const forecastDiv = document.getElementById('forecast');
-  forecastDiv.innerHTML = ''; // Clear previous forecast
+  forecastDiv.innerHTML = ''; 
 
-  // Filter to get weather data at noon for the next 5 days
+  
   const filteredData = data.list.filter((item) => item.dt_txt.includes('12:00:00'));
 
   filteredData.forEach((day) => {
